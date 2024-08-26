@@ -1,4 +1,4 @@
-package javaEx02;
+package javaEx01;
 
 public class StudentScore {
     public static void main(String[] args) {
