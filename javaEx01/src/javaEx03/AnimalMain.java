@@ -27,7 +27,16 @@ public class AnimalMain {
         ap.show();
         ap.sound();
 
-        // 만일 자식 클래스에서 오버라이딩을 안했다면
-        // 부모 클래스 Animal 클래스의 show()/sound() 호출
+        System.out.println("-----------------------");
+
+        // 다시 자식 타입으로 변환하고자 할 때 : 강제 타입 변환
+        // 현재 ap는 Animal 타입 : Animal 클래스의 메서드만 사용 가능
+        // 오버라이딩 된 메서드는 예외
+        ap.animalMethod();  // dogMethod()는 사용 불가
+
+        // dogMethod()를 사용하고 싶으면
+        // 다시 Dog 타입으로 강제 타입 변환
+        d = (Dog)ap;
+        d.dogMethod();
     }
 }
